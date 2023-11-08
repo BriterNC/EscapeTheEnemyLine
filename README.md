@@ -16,7 +16,7 @@ This is a VR game project made by students, a developer, from Bangkok University
 
 ### Credits:
 | Name                       | ID         | Section | No. |
-| -------------------------- | ---------- | ------- | --- |
+| -------------------------- | :--------: | :-----: | :-: |
 | [Siripoom Saenyato]        | 1640703888 | 329E    | 29  |
 | [Chontara Sangchaiyapoom]  | 1640704621 | 329D    | 25  |
 | [Sasiwimol Champasin]      | 1640705198 | 329D    | 26  |
