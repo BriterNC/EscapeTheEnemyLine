@@ -15,14 +15,16 @@ This is a VR game project made by students, a developer, from Bangkok University
 - [Quick Outline]
 
 ### Credits:
-- 1640703888 (Section 329E No.29) [Siripoom Saenyato]
-- 1640704621 (Section 329D No.25) [Chontara Sangchaiyapoom]
-- 1640705198 (Section 329D No.26) [Sasiwimol Champasin]
-- 1640705362 (Section 329D No.27) [Thodsaporm Saithong]
-- 1640705370 (Section 329D No.28) [Kanyaphak Prasertsang]
-- 1640706410 (Section 329D No.30) [Theerachot Langlongsatat]
-- 1640706428 (Section 329D No.31) [Aphisit Khammee]
-- 1640706469 (Section 329D No.32) [Pongpop Sootpong]
+| Name                       | ID         | Section | No. |
+| -------------------------- | ---------- | ------- | --- |
+| [Siripoom Saenyato]        | 1640703888 | 329E    | 29  |
+| [Chontara Sangchaiyapoom]  | 1640704621 | 329D    | 25  |
+| [Sasiwimol Champasin]      | 1640705198 | 329D    | 26  |
+| [Thodsaporm Saithong]      | 1640705362 | 329D    | 27  |
+| [Kanyaphak Prasertsang]    | 1640705370 | 329D    | 28  |
+| [Theerachot Langlongsatat] | 1640706410 | 329D    | 30  |
+| [Aphisit Khammee]          | 1640706428 | 329D    | 31  |
+| [Pongpop Sootpong]         | 1640706469 | 329D    | 32  |
 
 [Unity Editor 2022.3.11f1]: https://unity.com/releases/editor/whats-new/2022.3.11
 [Oculus XR Plugin]: https://docs.unity3d.com/Manual/com.unity.xr.oculus.html
