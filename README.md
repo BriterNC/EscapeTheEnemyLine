@@ -22,7 +22,7 @@ This is a VR game project made by students, a developer, from Bangkok University
 | [Sasiwimol Champasin]      | 1640705198 | 329D    | 26  |
 | [Thodsaporm Saithong]      | 1640705362 | 329D    | 27  |
 | [Kanyaphak Prasertsang]    | 1640705370 | 329D    | 28  |
-| [Theerachot Langlongsatat] | 1640706410 | 329D    | 30  |
+| [Theerachot Langlongsatit] | 1640706410 | 329D    | 30  |
 | [Aphisit Khammee]          | 1640706428 | 329D    | 31  |
 | [Pongpop Sootpong]         | 1640706469 | 329D    | 32  |
 
@@ -36,6 +36,6 @@ This is a VR game project made by students, a developer, from Bangkok University
 [Sasiwimol Champasin]: https://github.com/Bunnauyx21
 [Thodsaporm Saithong]: https://github.com/thodsaporm
 [Kanyaphak Prasertsang]: https://github.com/MHmermaid
-[Theerachot Langlongsatat]: https://github.com/BriterNC
+[Theerachot Langlongsatit]: https://github.com/BriterNC
 [Aphisit Khammee]: https://github.com/9Aphisit
 [Pongpop Sootpong]: https://github.com/Latte1408
