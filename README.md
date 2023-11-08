@@ -15,14 +15,14 @@ This is a game project made by students, a developer, from Bangkok University.
 - [Quick Outline]
 
 ### Credits:
-- 1640703888 [Siripoom Saenyato] (Section 329E No.29)
-- 1640704621 [Chontara Sangchaiyapoom] (Section 329D No.25)
-- 1640705198 [Sasiwimol Champasin] (Section 329D No.26)
-- 1640705362 [Thodsaporm Saithong] (Section 329D No.27)
-- 1640705370 [Kanyaphak Prasertsang] (Section 329D No.28)
-- 1640706410 [Theerachot Langlongsatat] (Section 329D No.30)
-- 1640706428 [Aphisit Khammee] (Section 329D No.31)
-- 1640706469 [Pongpop Sootpong] (Section 329D No.32)
+- 1640703888 (Section 329E No.29) [Siripoom Saenyato]
+- 1640704621 (Section 329D No.25) [Chontara Sangchaiyapoom]
+- 1640705198 (Section 329D No.26) [Sasiwimol Champasin]
+- 1640705362 (Section 329D No.27) [Thodsaporm Saithong]
+- 1640705370 (Section 329D No.28) [Kanyaphak Prasertsang]
+- 1640706410 (Section 329D No.30) [Theerachot Langlongsatat]
+- 1640706428 (Section 329D No.31) [Aphisit Khammee]
+- 1640706469 (Section 329D No.32) [Pongpop Sootpong]
 
 [Unity Editor 2022.3.11f1]: https://unity.com/releases/editor/whats-new/2022.3.11
 [Oculus XR Plugin]: https://docs.unity3d.com/Manual/com.unity.xr.oculus.html
