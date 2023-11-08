@@ -1,6 +1,6 @@
 # Escape The Enemy Line
 
-This is a game project made by students, a developer, from Bangkok University.
+This is a VR game project made by students, a developer, from Bangkok University.
 
 > Virtual and Augmented Reality (GI477)
 
