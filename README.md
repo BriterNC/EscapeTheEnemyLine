@@ -16,7 +16,7 @@ This is a game project made by students, a developer, from Bangkok University.
 
 ### Credits:
 - 1640703888 [Siripoom Saenyato] (Section 329E No.29)
-- 1640704621 [Chontara Sangchaiyapoom] (Section 329E No.25)
+- 1640704621 [Chontara Sangchaiyapoom] (Section 329D No.25)
 - 1640705198 [Sasiwimol Champasin] (Section 329D No.26)
 - 1640705362 [Thodsaporm Saithong] (Section 329D No.27)
 - 1640705370 [Kanyaphak Prasertsang] (Section 329D No.28)
