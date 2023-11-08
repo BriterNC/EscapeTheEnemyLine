@@ -1,4 +1,4 @@
-# EscapeTheEnemyLine
+# Escape The Enemy Line
 
 This is a game project made by students, a developer, from Bangkok University.
 
@@ -6,10 +6,10 @@ This is a game project made by students, a developer, from Bangkok University.
 
 ### Unity Editor & Packages:
 
-- Unity Editor 2022.3.11f1
-- Oculus XR Plugin
-- XR Interaction Toolkit
-- XR Plugin Management
+- [Unity Editor 2022.3.11f1]
+- [Oculus XR Plugin]
+- [XR Interaction Toolkit]
+- [XR Plugin Management]
 
 ### Unity Assets:
 - [Quick Outline]
@@ -24,6 +24,10 @@ This is a game project made by students, a developer, from Bangkok University.
 - 1640706428 [Aphisit Khammee] (Section 329D No.31)
 - 1640706469 [Pongpop Sootpong] (Section 329D No.32)
 
+[Unity Editor 2022.3.11f1]: https://unity.com/releases/editor/whats-new/2022.3.11
+[Oculus XR Plugin]: https://docs.unity3d.com/Manual/com.unity.xr.oculus.html
+[XR Interaction Toolkit]: https://docs.unity3d.com/Manual/com.unity.xr.interaction.toolkit.html
+[XR Plugin Management]: https://docs.unity3d.com/Manual/com.unity.xr.management.html
 [Quick Outline]: https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488
 [Siripoom Saenyato]: https://github.com/Gunipoom
 [Chontara Sangchaiyapoom]: https://github.com/Chontara
