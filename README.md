@@ -13,6 +13,8 @@ This is a VR game project made by students, a developer, from Bangkok University
 
 ### Unity Assets:
 - [Quick Outline]
+- [Oculus Integration]
+- [Meta XR Simulator]
 
 ### Credits:
 | Name                       | ID         | Section | No. |
@@ -31,6 +33,8 @@ This is a VR game project made by students, a developer, from Bangkok University
 [XR Interaction Toolkit]: https://docs.unity3d.com/Manual/com.unity.xr.interaction.toolkit.html
 [XR Plugin Management]: https://docs.unity3d.com/Manual/com.unity.xr.management.html
 [Quick Outline]: https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488
+[Oculus Integration]: https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022
+[Meta XR Simulator]: https://assetstore.unity.com/packages/tools/integration/meta-xr-simulator-266732
 [Siripoom Saenyato]: https://github.com/Gunipoom
 [Chontara Sangchaiyapoom]: https://github.com/Chontara
 [Sasiwimol Champasin]: https://github.com/Bunnauyx21
