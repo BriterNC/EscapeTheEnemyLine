@@ -9,6 +9,7 @@ This is a VR game project made by students from Bangkok University.
 - [Unity Editor 2022.3.11f1]
 - [XR Interaction Toolkit]
 - [XR Plugin Management]
+- [TextMeshPro]
 - ~~[Oculus XR Plugin]~~[^1]
 
 ### Unity Assets:
@@ -39,6 +40,7 @@ This is a VR game project made by students from Bangkok University.
 [Oculus XR Plugin]: https://docs.unity3d.com/Manual/com.unity.xr.oculus.html
 [XR Interaction Toolkit]: https://docs.unity3d.com/Manual/com.unity.xr.interaction.toolkit.html
 [XR Plugin Management]: https://docs.unity3d.com/Manual/com.unity.xr.management.html
+[TextMeshPro]: https://docs.unity3d.com/Manual/com.unity.textmeshpro.html
 [Quick Outline]: https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488
 [Unity-URP-Outlines]: https://github.com/Robinseibold/Unity-URP-Outlines
 [Prototype Textures]: https://www.kenney.nl/assets/prototype-textures

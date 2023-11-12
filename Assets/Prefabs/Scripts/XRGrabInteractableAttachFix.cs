@@ -11,31 +11,22 @@ public class XRGrabInteractableAttachFix : XRGrabInteractable
     
     public override Transform GetAttachTransform(IXRInteractor interactor)
     {
-        Debug.Log("GetAttachTransform");
+        //Debug.Log("GetAttachTransform");
 
         Transform i_attachTransform = null ;
 
-        if(interactor.transform.CompareTag("Left Hand")){
-            Debug.Log("Left") ;
+        if (interactor.transform.CompareTag("Left Hand"))
+        {
+            //Debug.Log("Left") ;
             i_attachTransform  = leftAttachPoint ;
         }
-        if(interactor.transform.CompareTag("Right Hand")){
-            Debug.Log("Right") ;
+        
+        if (interactor.transform.CompareTag("Right Hand"))
+        {
+            //Debug.Log("Right") ;
             i_attachTransform  = rightAttachPoint ;
         }
+        
         return i_attachTransform != null ? i_attachTransform : base.GetAttachTransform(interactor);
     }
-    /*void Update()
-    {
-        if (xrGrabInteractable.CompareTag("Left Hand"))
-        {
-            xrGrabInteractable.attachTransform = leftAttachPoint;
-            Debug.Log("Left!");
-        }
-        else if (xrGrabInteractable.CompareTag("Right Hand"))
-        {
-            xrGrabInteractable.attachTransform = rightAttachPoint;
-            Debug.Log("Right!");
-        }
-    }*/
 }
