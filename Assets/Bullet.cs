@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
 {
     public float travelSpeed, destroyDelay;
     public bool useGravity, updateTravel, useVelocity, isParry;
+    public GameObject particle;
 
     private Rigidbody rig;
     
@@ -20,6 +21,20 @@ public class Bullet : MonoBehaviour
         {
             rig.velocity = transform.forward * travelSpeed;
         }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hit Player!");
+        }
+        //Debug.Log("Hit! " + other.gameObject.name);
+
+        ContactPoint contact = other.contacts[0];
+        Instantiate(particle, contact.point, Quaternion.identity);
+        
+        Destroy(gameObject);
     }
 
     public bool IsUpdatingTravel()

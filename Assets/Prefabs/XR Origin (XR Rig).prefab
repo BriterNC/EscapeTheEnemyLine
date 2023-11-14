@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Camera: {fileID: 7786187779748430574}
   m_OriginBaseGameObject: {fileID: 982168208307814048}
   m_CameraFloorOffsetObject: {fileID: 6349407499664966423}
-  m_RequestedTrackingOriginMode: 0
+  m_RequestedTrackingOriginMode: 2
   m_CameraYOffset: 1.1176
 --- !u!114 &7147403188043262951
 MonoBehaviour:
@@ -498,7 +498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_System: {fileID: 7358207887095558652}
-  m_MoveSpeed: 1
+  m_MoveSpeed: 3
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1
@@ -2234,7 +2234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4135366270944369973}
   m_Layer: 0
-  m_Name: Target1
+  m_Name: Target 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2280,7 +2280,7 @@ Transform:
   m_GameObject: {fileID: 6349407499664966423}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1176, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1175, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2302,7 +2302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1693812268264618616}
   m_Layer: 0
-  m_Name: Target2
+  m_Name: Target 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2333,7 +2333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 930927448593914004}
   m_Layer: 0
-  m_Name: Target5
+  m_Name: Target 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2766,7 +2766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 140422217429718207}
   m_Layer: 0
-  m_Name: Target3
+  m_Name: Target 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2797,7 +2797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7183784849544332263}
   m_Layer: 0
-  m_Name: Target4
+  m_Name: Target 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

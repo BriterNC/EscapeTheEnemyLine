@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 5023628403490132805}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -133,7 +133,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -159,6 +159,8 @@ MonoBehaviour:
   updateTravel: 0
   useVelocity: 0
   isParry: 0
+  particle: {fileID: 4352428455162962365, guid: 65c76b50e6e016c45aeb8168b8d64b80,
+    type: 3}
 --- !u!54 &7747028335654949651
 Rigidbody:
   m_ObjectHideFlags: 0

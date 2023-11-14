@@ -7,17 +7,17 @@ using Random = UnityEngine.Random;
 public class BulletLauncher : MonoBehaviour
 {
     private GameObject _player;
-    public float timer = 5;
-    public float countdownTime;
-    public int targetCount;
+    public Vector2 intervalBetween;
+    private float _countdownTime;
+    private int _targetCount;
     public GameObject bullet;
     public Transform spawnPoint;
-    public Transform target;
+    private Transform _target;
 
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        targetCount = _player.transform.GetChild(0).GetChild(5).childCount;
+        _targetCount = _player.transform.GetChild(0).GetChild(5).childCount;
     }
 
     private void Update()
@@ -28,16 +28,16 @@ public class BulletLauncher : MonoBehaviour
 
     public void ShootPlayer()
     {
-        int rand = Random.Range(0, targetCount);
-        target = _player.transform.GetChild(0).GetChild(5).GetChild(rand);
+        int rand = Random.Range(0, _targetCount);
+        _target = _player.transform.GetChild(0).GetChild(5).GetChild(rand);
         
-        countdownTime -= Time.deltaTime;
+        _countdownTime -= Time.deltaTime;
         
-        if (countdownTime > 0) return;
+        if (_countdownTime > 0) return;
 
-        countdownTime = timer;
+        _countdownTime = Random.Range(intervalBetween.x, intervalBetween.y);
 
-        transform.LookAt(target);
+        transform.LookAt(_target);
         Instantiate(bullet, spawnPoint.position, spawnPoint.rotation);
     }
 }
