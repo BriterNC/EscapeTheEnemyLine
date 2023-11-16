@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class BulletLauncher : MonoBehaviour
 {
+    public bool activated;
     private GameObject _player;
     public Vector2 intervalBetween;
     private float _countdownTime;
@@ -22,8 +23,11 @@ public class BulletLauncher : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(_player.transform.GetChild(0).GetChild(0));
-        ShootPlayer();
+        if (activated)
+        {
+            transform.LookAt(_player.transform.GetChild(0).GetChild(0));
+            ShootPlayer();
+        }
     }
 
     public void ShootPlayer()

@@ -7,6 +7,8 @@ TagManager:
   - Left Hand
   - Right Hand
   - Bullet
+  - Enemy Shooting Entry
+  - Destination
   layers:
   - Default
   - TransparentFX
@@ -17,12 +19,12 @@ TagManager:
   - Outlined
   - No Outline
   - Sliceable
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player Border
+  - Ignore Border
+  - Enemy Shooting Entry
+  - Waypoint
+  - Ignore Bake NavMesh
+  - Target
   - 
   - 
   - 

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
@@ -25,15 +24,16 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        /*if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log("Hit Player!");
-        }
-        //Debug.Log("Hit! " + other.gameObject.name);
+        }*/
+        Debug.Log("Hit! " + other.gameObject.name);
 
         ContactPoint contact = other.contacts[0];
         Instantiate(particle, contact.point, Quaternion.identity);
         
+        //gameObject.SetActive(false);
         Destroy(gameObject);
     }
 

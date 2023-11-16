@@ -6,15 +6,17 @@ This is a VR game project made by students from Bangkok University.
 
 ### Unity Editor & Packages:
 
-- [Unity Editor 2022.3.11f1]
+- [Unity Editor 2022.3.11f1] (Modules: [Android Build Support])
 - [XR Interaction Toolkit]
 - [XR Plugin Management]
 - [TextMeshPro]
+- [AI Navigation]
 - ~~[Oculus XR Plugin]~~[^1]
 
 ### Unity Assets:
 - [Prototype Textures]
 - [SpaceSkies Free]
+- [Dynamic Music]
 - [Ezy-Slice]
 - [VelocityEstimator]
 - ~~[Oculus Integration]~~[^1]
@@ -37,14 +39,17 @@ This is a VR game project made by students from Bangkok University.
 [^1]: Removed except Oculus Hand Prefabs.
 
 [Unity Editor 2022.3.11f1]: https://unity.com/releases/editor/whats-new/2022.3.11
+[Android Build Support]: https://docs.unity3d.com/Manual/android-sdksetup.html
 [Oculus XR Plugin]: https://docs.unity3d.com/Manual/com.unity.xr.oculus.html
 [XR Interaction Toolkit]: https://docs.unity3d.com/Manual/com.unity.xr.interaction.toolkit.html
 [XR Plugin Management]: https://docs.unity3d.com/Manual/com.unity.xr.management.html
 [TextMeshPro]: https://docs.unity3d.com/Manual/com.unity.textmeshpro.html
+[AI Navigation]: https://docs.unity3d.com/Packages/com.unity.ai.navigation@2.0/manual/index.html
 [Quick Outline]: https://assetstore.unity.com/packages/tools/particles-effects/quick-outline-115488
 [Unity-URP-Outlines]: https://github.com/Robinseibold/Unity-URP-Outlines
 [Prototype Textures]: https://www.kenney.nl/assets/prototype-textures
 [SpaceSkies Free]: https://assetstore.unity.com/packages/2d/textures-materials/sky/spaceskies-free-80503
+[Dynamic Music]: https://assetstore.unity.com/packages/audio/music/dynamic-music-35925
 [Ezy-Slice]: https://github.com/DavidArayan/ezy-slice
 [VelocityEstimator]: https://valvesoftware.github.io/steamvr_unity_plugin/api/Valve.VR.InteractionSystem.VelocityEstimator.html
 [Oculus Integration]: https://assetstore.unity.com/packages/tools/integration/oculus-integration-82022
