@@ -18,7 +18,7 @@ public class BulletLauncher : MonoBehaviour
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
-        _targetCount = _player.transform.GetChild(0).GetChild(5).childCount;
+        _targetCount = _player.transform.GetChild(0).GetChild(0).GetChild(0).childCount;
     }
 
     private void Update()
@@ -33,7 +33,7 @@ public class BulletLauncher : MonoBehaviour
     public void ShootPlayer()
     {
         int rand = Random.Range(0, _targetCount);
-        _target = _player.transform.GetChild(0).GetChild(5).GetChild(rand);
+        _target = _player.transform.GetChild(0).GetChild(0).GetChild(0).GetChild(rand);
         
         _countdownTime -= Time.deltaTime;
         

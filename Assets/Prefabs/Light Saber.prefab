@@ -4849,6 +4849,7 @@ GameObject:
   - component: {fileID: 6169550597346458615}
   - component: {fileID: 1462323561784689572}
   - component: {fileID: 7291377395493484477}
+  - component: {fileID: 502603414367667604}
   m_Layer: 7
   m_Name: Light Saber
   m_TagString: Untagged
@@ -5163,6 +5164,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 502603414367667604}
+        m_TargetAssemblyTypeName: HapticInteractable, Assembly-CSharp
+        m_MethodName: TriggerHaptic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -5248,6 +5261,22 @@ MonoBehaviour:
   m_AddDefaultGrabTransformers: 1
   leftAttachPoint: {fileID: 5552070933193252906}
   rightAttachPoint: {fileID: 5318010470497490541}
+--- !u!114 &502603414367667604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022826092486197864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c9918e834e5434babef7f3d07ec287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intensity: 1
+  duration: 1
+  inLeftHand: 0
+  inRightHand: 0
 --- !u!1 &2038965505063147276
 GameObject:
   m_ObjectHideFlags: 0

@@ -61,6 +61,12 @@ public class EnemyController : MonoBehaviour
             }
             //Debug.Log("Current Destination = " + _currentDestination);
         }
+
+        if (other.gameObject.CompareTag("Bullet"))
+        {
+            Destroy(gameObject);
+            Debug.Log("Bye Bye Enemy");
+        }
     }
 
     private void OnTriggerExit(Collider other)
