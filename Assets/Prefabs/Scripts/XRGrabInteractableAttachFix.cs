@@ -12,9 +12,9 @@ public class XRGrabInteractableAttachFix : XRGrabInteractable
     public override Transform GetAttachTransform(IXRInteractor interactor)
     {
         //Debug.Log("GetAttachTransform");
-
+        
         Transform i_attachTransform = null ;
-
+        
         if (interactor.transform.CompareTag("Left Hand"))
         {
             //Debug.Log("Left") ;
