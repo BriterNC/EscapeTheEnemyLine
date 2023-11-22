@@ -4852,7 +4852,7 @@ GameObject:
   - component: {fileID: 502603414367667604}
   m_Layer: 7
   m_Name: Light Saber
-  m_TagString: Untagged
+  m_TagString: Saber
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5034,6 +5034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saberAnimator: {fileID: 6473047913627904467}
   saberIsOn: 0
+  haptic: {fileID: 0}
 --- !u!114 &1462323561784689572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5274,7 +5275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensity: 1
-  duration: 1
+  duration: 0.25
   inLeftHand: 0
   inRightHand: 0
 --- !u!1 &2038965505063147276
