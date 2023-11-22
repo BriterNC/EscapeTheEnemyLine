@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 2993447633017735455}
   - component: {fileID: 3311691857017052316}
   m_Layer: 0
-  m_Name: XR Origin (XR Rig)
+  m_Name: Player (XR Rig)
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -797,6 +797,7 @@ GameObject:
   - component: {fileID: 1743576153618082872}
   - component: {fileID: 63811882663823982}
   - component: {fileID: 4464010205244275851}
+  - component: {fileID: 9081827953481706645}
   m_Layer: 0
   m_Name: Right Ray Interactor
   m_TagString: Right Hand
@@ -1465,6 +1466,18 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_SortAtRoot: 0
+--- !u!114 &9081827953481706645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1274475487565382504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fad09d93a4d164aa3ee2f564fe26e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1418587364873309992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,6 +2011,7 @@ GameObject:
   - component: {fileID: 2371385489085716455}
   - component: {fileID: 8005012922178000718}
   - component: {fileID: 5084138808716156182}
+  - component: {fileID: 3243536901025041676}
   m_Layer: 0
   m_Name: Left Ray Interactor
   m_TagString: Left Hand
@@ -2666,6 +2680,18 @@ SortingGroup:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_SortAtRoot: 0
+--- !u!114 &3243536901025041676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4315645561578222247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5fad09d93a4d164aa3ee2f564fe26e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5196817038329843160
 GameObject:
   m_ObjectHideFlags: 0

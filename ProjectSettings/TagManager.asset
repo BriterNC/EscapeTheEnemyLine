@@ -9,6 +9,7 @@ TagManager:
   - Bullet
   - Enemy Shooting Entry
   - Destination
+  - Saber
   layers:
   - Default
   - TransparentFX

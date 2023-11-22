@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _stopDistance = _agent.stoppingDistance;
         if (destination.Length > 0)

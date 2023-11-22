@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,23 @@ public class SaberController : MonoBehaviour
 {
     public Animator saberAnimator;
     public bool saberIsOn = false;
+    // TEMP
+    public HapticInteractable haptic;
+
+    private void Start()
+    {
+        haptic = GetComponent<HapticInteractable>();
+    }
 
     public void TurnSaberOnOff()
     {
+        /*if (haptic.inLeftHand || haptic.inRightHand)
+        {
+        }
+        else
+        {
+            
+        }*/
         if (!saberIsOn)
         {
             saberAnimator.SetTrigger("TurnOn");
