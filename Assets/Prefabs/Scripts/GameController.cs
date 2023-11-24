@@ -8,30 +8,42 @@ public class GameController : MonoBehaviour
 {
     public int[] assignedEnemyInWave;
     
-    public int totalWave;
+    private int totalWave;
     public int currentWave;
-    public int remainEnemy;
-    /*
+
+    public GameObject playerGameObject;
+    public int playerHp, playerMp;
+
+    public bool waveStarted;
+    
     public int currentEnemy;
+    public int remainEnemy;
     public int spawnedEnemyFloor1;
     public int spawnedEnemyFloor2;
-    public Transform[] spawnPointFloor1;
-    public Transform[] spawnPointFloor2;
+    public Vector3[] spawnPointFloor1;
+    public Vector3[] spawnPointFloor2;
     public int enemyFloor1Limit; // Don't change this in inspector, it's ref from spawnPoint
     public int enemyFloor2Limit; // Don't change this in inspector, it's ref from spawnPoint
     public GameObject enemyGameObject;
 
-    private Coroutine myCoroutine;
-    */
+    //private Coroutine myCoroutine;
     
     private void Start()
     {
+        playerGameObject = GameObject.FindWithTag("Player");
         totalWave = assignedEnemyInWave.Length;
+        
         //myCoroutine = StartCoroutine(UpdateGraph(totalWave));
         //remainEnemy = ((currentWave * currentWave) / 2) + (currentWave / 2); // Parabola upward
+        
+        enemyFloor1Limit = spawnPointFloor1.Length;
+        enemyFloor2Limit = spawnPointFloor2.Length;
+    }
 
-        //enemyFloor1Limit = spawnPointFloor1.Length;
-        //enemyFloor2Limit = spawnPointFloor2.Length;
+    public void StartWave()
+    {
+        waveStarted = true;
+        currentWave = 1;
     }
 
     public void FindEnemyLimit()
@@ -51,13 +63,17 @@ public class GameController : MonoBehaviour
     6   =   9
     7   =   12
     8   =   15
-    8   =   15
     9   =   20
     10  =   25
     */
 
-    /*private void Update()
+    private void Update()
     {
+        if (!waveStarted)
+        {
+            return;
+        }
+        
         if (spawnedEnemyFloor1 < enemyFloor1Limit)
         {
             SpawnEnemy(enemyGameObject, 1);
@@ -66,11 +82,22 @@ public class GameController : MonoBehaviour
         {
             SpawnEnemy(enemyGameObject, 2);
         }
-    }*/
+    }
 
-    /*private void SpawnEnemy(GameObject enemy, int floor)
+    private void SpawnEnemy(GameObject enemy, int floor)
     {
-        //int rand = Random.Range(0, spawnPoint.Length - 1);
-        //Instantiate(enemy, spawnPoint[rand], Quaternion.identity);
-    }*/
+        if (currentEnemy >= remainEnemy)
+        {
+            return;
+        }
+        else
+        {
+            currentEnemy++;
+            if (floor == 1)
+            {
+                int rand = Random.Range(0, spawnPointFloor1.Length - 1);
+                Instantiate(enemy, spawnPointFloor1[rand], Quaternion.identity);
+            }
+        }
+    }
 }
