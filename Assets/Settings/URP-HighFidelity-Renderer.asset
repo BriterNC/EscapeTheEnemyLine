@@ -87,7 +87,7 @@ MonoBehaviour:
   m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
-    m_Bits: 439
+    m_Bits: 44471
   m_TransparentLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -124,7 +124,7 @@ MonoBehaviour:
       RenderQueueType: 0
       LayerMask:
         serializedVersion: 2
-        m_Bits: 31424
+        m_Bits: 64192
       PassNames: []
     overrideMaterial: {fileID: 0}
     overrideMaterialPassIndex: 0

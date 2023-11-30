@@ -42,7 +42,15 @@ public class EnemyController : MonoBehaviour
         {
             _agent.stoppingDistance = _stopDistance;
             destination[0] = player;
-            transform.GetChild(0).GetComponent<BulletLauncher>().activated = true;
+            if (transform.GetChildCount() > 1)
+            {
+                transform.GetChild(0).GetComponent<BulletLauncher>().activated = true;
+                transform.GetChild(1).GetComponent<BulletLauncher>().activated = true;
+            }
+            else
+            {
+                transform.GetChild(0).GetComponent<BulletLauncher>().activated = true;
+            }
             transform.LookAt(new Vector3(destination[_currentDestination].position.x, transform.position.y, destination[_currentDestination].position.z));
         }
         _agent.SetDestination(destination[_currentDestination].position);
@@ -63,7 +71,7 @@ public class EnemyController : MonoBehaviour
             //Debug.Log("Current Destination = " + _currentDestination);
         }
 
-        if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet") && other.gameObject.GetComponent<Bullet>().isParry)
         {
             Destroy(gameObject);
             Debug.Log("Bye Bye Enemy");

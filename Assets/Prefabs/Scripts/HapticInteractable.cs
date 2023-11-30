@@ -24,12 +24,12 @@ public class HapticInteractable : MonoBehaviour
     {
         if (inLeftHand)
         {
-            Debug.Log("Sending Haptic to Left Controller");
+            //Debug.Log("Sending Haptic to Left Controller");
             _leftController.SendHapticImpulse(intensity, duration);
         }
         if (inRightHand)
         {
-            Debug.Log("Sending Haptic to Right Controller");
+            //Debug.Log("Sending Haptic to Right Controller");
             _rightController.SendHapticImpulse(intensity, duration);
         }
     }

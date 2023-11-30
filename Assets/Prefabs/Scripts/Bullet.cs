@@ -8,12 +8,14 @@ public class Bullet : MonoBehaviour
 {
     public float travelSpeed, destroyDelay;
     public bool useGravity, updateTravel, useVelocity, isParry, isHit;
-    public GameObject particle;
+    public GameObject particle, gameController;
+    public AudioSource hitSaberSound;
 
     private Rigidbody _rig;
     
     void Start()
     {
+        gameController = GameObject.FindWithTag("GameController");
         Destroy(gameObject, destroyDelay);
         _rig = GetComponent<Rigidbody>();
         _rig.useGravity = useGravity;
@@ -27,7 +29,8 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") | other.gameObject.CompareTag("MainCamera"))
         {
-            Debug.Log("Hit Player!");
+            //Debug.Log("Hit Player!");
+            gameController.GetComponent<GameController>().Damage();
         }
         
         //Debug.Log("Hit! " + other.gameObject.name);
@@ -40,6 +43,7 @@ public class Bullet : MonoBehaviour
             gameObject.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
             gameObject.GetComponent<CapsuleCollider>().isTrigger = true;
             isHit = true;
+            hitSaberSound.Play();
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using EzySlice;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class SliceObject : MonoBehaviour
 {
@@ -44,7 +45,9 @@ public class SliceObject : MonoBehaviour
             if (target.layer == temp)
             {
                 upperHull.layer = LayerMask.NameToLayer("Sliceable");
+                upperHull.AddComponent<XRGrabInteractable>();
                 lowerHull.layer = LayerMask.NameToLayer("Sliceable");
+                lowerHull.AddComponent<XRGrabInteractable>();
             }
             
             Destroy(target);
