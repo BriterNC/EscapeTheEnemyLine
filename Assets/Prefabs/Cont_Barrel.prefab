@@ -187,7 +187,7 @@ MonoBehaviour:
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4882528129279366200}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4882528129279366200}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4882528129279366200}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6

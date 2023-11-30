@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4761215091169858138
+--- !u!1 &2808148448940519240
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,51 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5237655757578532950}
-  - component: {fileID: 2101130971953110209}
-  - component: {fileID: 3381971866845388093}
-  - component: {fileID: 5468719475257632458}
-  - component: {fileID: 3832197381181605467}
-  - component: {fileID: 3697861268306598445}
-  - component: {fileID: 9142494000427026819}
-  - component: {fileID: 33687949752601426}
-  m_Layer: 0
-  m_Name: Cont_Chest_Static
+  - component: {fileID: 4674198156361975137}
+  - component: {fileID: 3298544951629815927}
+  - component: {fileID: 418963466807094811}
+  - component: {fileID: 4608092979367095735}
+  - component: {fileID: 7051445435714615701}
+  - component: {fileID: 6513797315351277259}
+  - component: {fileID: 3432263364595531816}
+  - component: {fileID: 2998956739826605322}
+  m_Layer: 8
+  m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5237655757578532950
+--- !u!4 &4674198156361975137
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.042105, y: 0.000000014017968, z: 8.280971}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2, y: 1.25, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2101130971953110209
+--- !u!33 &3298544951629815927
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
-  m_Mesh: {fileID: -911714850578499024, guid: 1abbaf386b79c0249814923c46760fb7, type: 3}
---- !u!23 &3381971866845388093
+  m_GameObject: {fileID: 2808148448940519240}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &418963466807094811
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c2ea0fb3ba00ad9409dc320d96b6f12f, type: 2}
+  - {fileID: 2100000, guid: 983900e3fc01d3941a6f933ba6f2cad6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &5468719475257632458
-MeshCollider:
+--- !u!65 &4608092979367095735
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -106,17 +106,16 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -911714850578499024, guid: 1abbaf386b79c0249814923c46760fb7, type: 3}
---- !u!54 &3832197381181605467
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &7051445435714615701
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -137,29 +136,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!208 &3697861268306598445
+--- !u!208 &6513797315351277259
 NavMeshObstacle:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   m_Enabled: 1
   serializedVersion: 3
   m_Shape: 1
-  m_Extents: {x: 0.7, y: 0.425, z: 0.325}
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 0
-  m_Center: {x: 0, y: 0.425, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &9142494000427026819
+--- !u!114 &3432263364595531816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -186,7 +185,7 @@ MonoBehaviour:
   m_FirstHoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33687949752601426}
+      - m_Target: {fileID: 2998956739826605322}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6
@@ -201,7 +200,7 @@ MonoBehaviour:
   m_LastHoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33687949752601426}
+      - m_Target: {fileID: 2998956739826605322}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6
@@ -231,7 +230,7 @@ MonoBehaviour:
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33687949752601426}
+      - m_Target: {fileID: 2998956739826605322}
         m_TargetAssemblyTypeName: OutlinerAffordanceController, Assembly-CSharp
         m_MethodName: SetOutlineScale
         m_Mode: 6
@@ -341,13 +340,13 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &33687949752601426
+--- !u!114 &2998956739826605322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4761215091169858138}
+  m_GameObject: {fileID: 2808148448940519240}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84b174bd234817f41b65507484ac92cf, type: 3}

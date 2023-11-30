@@ -164,6 +164,7 @@ MonoBehaviour:
   isHit: 0
   particle: {fileID: 4352428455162962365, guid: 65c76b50e6e016c45aeb8168b8d64b80,
     type: 3}
+  gameController: {fileID: 0}
   hitSaberSound: {fileID: 1730803270108653618}
 --- !u!54 &7747028335654949651
 Rigidbody:

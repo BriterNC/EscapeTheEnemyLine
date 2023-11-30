@@ -10,6 +10,7 @@ TagManager:
   - Enemy Shooting Entry
   - Destination
   - Saber
+  - Enemy
   layers:
   - Default
   - TransparentFX

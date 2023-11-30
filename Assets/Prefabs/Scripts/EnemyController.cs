@@ -12,6 +12,8 @@ public class EnemyController : MonoBehaviour
     private float _stopDistance;
     public bool enteredShootingArea;
     private int _currentDestination = 0;
+    public int bossHp = 5;
+    public bool isBoss;
     
     void Start()
     {
@@ -34,6 +36,12 @@ public class EnemyController : MonoBehaviour
     
     void Update()
     {
+        if (isBoss && bossHp <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Enemy Boss Died");
+        }
+        
         if (!enteredShootingArea)
         {
             _agent.stoppingDistance = 0;
@@ -42,7 +50,7 @@ public class EnemyController : MonoBehaviour
         {
             _agent.stoppingDistance = _stopDistance;
             destination[0] = player;
-            if (transform.GetChildCount() > 1)
+            if (transform.childCount > 1)
             {
                 transform.GetChild(0).GetComponent<BulletLauncher>().activated = true;
                 transform.GetChild(1).GetComponent<BulletLauncher>().activated = true;
@@ -73,8 +81,15 @@ public class EnemyController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Bullet") && other.gameObject.GetComponent<Bullet>().isParry)
         {
-            Destroy(gameObject);
-            Debug.Log("Bye Bye Enemy");
+            if (!isBoss)
+            {
+                Destroy(gameObject);
+                Debug.Log("Enemy Died");
+            }
+            else if (isBoss)
+            {
+                bossHp--;
+            }
         }
     }
 

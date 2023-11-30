@@ -10,12 +10,14 @@ public class HapticInteractable : MonoBehaviour
     public float intensity;
     public float duration;
     private GameObject _player;
+    private GameObject _gameController;
     private XRBaseController _leftController, _rightController;
     public bool inLeftHand, inRightHand;
 
     private void Start()
     {
         _player = GameObject.FindGameObjectWithTag("Player");
+        _gameController = GameObject.FindGameObjectWithTag("GameController");
         _leftController = _player.transform.GetChild(0).Find("Left Controller").GetComponent<XRBaseController>();
         _rightController = _player.transform.GetChild(0).Find("Right Controller").GetComponent<XRBaseController>();
     }
@@ -39,10 +41,12 @@ public class HapticInteractable : MonoBehaviour
         if (other.gameObject.CompareTag("Left Hand"))
         {
             inLeftHand = true;
+            _gameController.GetComponent<GameController>().leftUsingMp = false;
         }
         if (other.gameObject.CompareTag("Right Hand"))
         {
             inRightHand = true;
+            _gameController.GetComponent<GameController>().rightUsingMp = false;
         }
     }
 

@@ -30,13 +30,20 @@ public class GameController : MonoBehaviour
     public GameObject startButton, alertSound;
 
     public GameObject[] door;
+    public GameObject[] bossDoor;
+    public GameObject enemyBoss;
+    public bool isBossPhrase;
     public GameObject[] tempEnemySet;
+    
     public GameObject[] led;
+    
     public GameObject monitorPanel;
-    public Material ledRed;
+    public Material ledRed, ledGreen;
 
     public GameObject[] ledShipEntrance;
-    public Material ledRedShipEntrance;
+    public Material ledRedShipEntrance, ledGreenShipEntrance;
+
+    public GameObject missionCompleteSound;
     
     public int currentEnemy;
     public int remainEnemy;
@@ -61,7 +68,7 @@ public class GameController : MonoBehaviour
         enemyFloor2Limit = spawnPointFloor2.Length;
         
         //Temp
-        StartWave();
+        //StartWave();
     }
 
     public void StartWave()
@@ -85,6 +92,8 @@ public class GameController : MonoBehaviour
         monitorPanel.GetComponent<Image>().color = Color.red;
         
         currentWave = 1;
+        currentWaveTextMesh.text = "Wave: 1 / 2";
+        
         waveStarted = true;
         startButton.SetActive(false);
         alertSound.SetActive(true);
@@ -130,7 +139,7 @@ public class GameController : MonoBehaviour
             // Continue
         }
         
-        CheckCurrentWaveRemainEnemy();
+        //CheckCurrentWaveRemainEnemy();
 
         if (playerMp <= 0)
         {
@@ -184,7 +193,34 @@ public class GameController : MonoBehaviour
             return;
         }
         
-        currentWaveTextMesh.text = $"Wave: {currentWave} / {totalWave}";
+        //currentWaveTextMesh.text = $"Wave: {currentWave} / {totalWave}";
+
+        if (enemyBoss == null)
+        {
+            foreach (GameObject ledTemp in led)
+            {
+                ledTemp.GetComponent<MeshRenderer>().material = ledGreen;
+            }
+            foreach (GameObject ledTemp in ledShipEntrance)
+            {
+                ledTemp.GetComponent<MeshRenderer>().material = ledGreenShipEntrance;
+            }
+            monitorPanel.GetComponent<Image>().color = Color.green;
+            alertSound.SetActive(false);
+            missionCompleteSound.SetActive(true);
+        }
+        
+        if (isBossPhrase)
+        {
+            return;
+        }
+        
+        if (!isBossPhrase && tempEnemySet[0] == null && tempEnemySet[1] == null/* && tempEnemySet[2] == null && tempEnemySet[3] == null*/)
+        {
+            Debug.Log("All enemy died!");
+            isBossPhrase = true;
+            BossPhrase();
+        }
         
         if (spawnedEnemyFloor1 < enemyFloor1Limit)
         {
@@ -211,6 +247,16 @@ public class GameController : MonoBehaviour
                 Instantiate(enemy, test, Quaternion.identity);
                 currentEnemy++;
             }
+        }
+    }
+
+    private void BossPhrase()
+    {
+        currentWaveTextMesh.text = "Wave: 2 / 2";
+        enemyBoss.SetActive(true);
+        foreach (GameObject door in bossDoor)
+        {
+            door.GetComponent<Animator>().SetBool("character_nearby", true);
         }
     }
 
@@ -244,11 +290,11 @@ public class GameController : MonoBehaviour
         damagePanel.GetComponent<Animator>().SetTrigger("Damage");
     }
     
-    private void CheckCurrentWaveRemainEnemy()
+    /*private void CheckCurrentWaveRemainEnemy()
     {
         /*if ()
         {
             remainEnemy = 1;
-        }*/
-    }
+        }#1#
+    }*/
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 enum ParryMethod
 {
@@ -15,6 +16,8 @@ public class Parry : MonoBehaviour
 {
     private ParryMethod parryMethod;
     public bool adjustBulletPosition;
+
+    public AudioSource[] parrySound;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -30,6 +33,9 @@ public class Parry : MonoBehaviour
             Vector3 inverse = direction * -1;
             Vector3 position = other.transform.position;
 
+            int rand = Random.Range(0, parrySound.Length - 1);
+            parrySound[rand].Play();
+            
             switch (parryMethod)
             {
                 case (ParryMethod.Inverse):
