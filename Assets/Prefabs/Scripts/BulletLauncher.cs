@@ -6,6 +6,7 @@ using Random = UnityEngine.Random;
 
 public class BulletLauncher : MonoBehaviour
 {
+    private GameController _gameController;
     public bool activated;
     private GameObject _player;
     public Vector2 intervalBetween;
@@ -17,12 +18,18 @@ public class BulletLauncher : MonoBehaviour
 
     private void Start()
     {
+        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         _player = GameObject.FindGameObjectWithTag("Player");
         _targetCount = _player.transform.GetChild(0).GetChild(0).GetChild(0).childCount;
     }
 
     private void Update()
     {
+        if (_gameController.gameOver)
+        {
+            return;
+        }
+        
         if (activated)
         {
             transform.LookAt(_player.transform.GetChild(0).GetChild(0));

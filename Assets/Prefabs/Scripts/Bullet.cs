@@ -27,14 +27,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player") | other.gameObject.CompareTag("MainCamera"))
-        {
-            //Debug.Log("Hit Player!");
-            gameController.GetComponent<GameController>().Damage();
-        }
-        
-        //Debug.Log("Hit! " + other.gameObject.name);
-        
         // Create Particles on hitting
         if (!isHit)
         {
@@ -45,6 +37,25 @@ public class Bullet : MonoBehaviour
             isHit = true;
             hitSaberSound.Play();
         }
+
+        if (other.gameObject.CompareTag("Saber"))
+        {
+            isParry = true;
+            return;
+        }
+
+        if (isParry)
+        {
+            return;
+        }
+        
+        if (!isParry && (other.gameObject.CompareTag("Player") | other.gameObject.CompareTag("MainCamera")))
+        {
+            //Debug.Log("Hit Player!");
+            gameController.GetComponent<GameController>().Damage();
+        }
+        
+        Debug.Log("Hit! " + other.gameObject.name);
     }
 
     public bool IsUpdatingTravel()

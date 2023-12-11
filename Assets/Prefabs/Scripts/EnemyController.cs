@@ -6,20 +6,38 @@ using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour
 {
+    private GameController _gameController;
     public Transform player;
     public Transform[] destination;
+    private Transform _tempDestination;
     private NavMeshAgent _agent;
     private float _stopDistance;
     public bool enteredShootingArea;
     private int _currentDestination = 0;
     public int bossHp = 5;
     public bool isBoss;
-    
+    private Vector3 startPosition;
+
+    public void OnEnable()
+    {
+        startPosition = gameObject.transform.position;
+    }
+
     void Start()
     {
+        _gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = GetComponent<NavMeshAgent>();
         _stopDistance = _agent.stoppingDistance;
+
+        var temp = 0;
+        foreach (Transform destinationTransform in destination)
+        {
+            destination[temp] = destinationTransform;
+            temp++;
+        }
+        
+        _tempDestination = destination[0];
         if (destination.Length > 0)
         {
             _currentDestination = destination.Length - 1;
@@ -36,9 +54,15 @@ public class EnemyController : MonoBehaviour
     
     void Update()
     {
+        if (_gameController.gameOver)
+        {
+            return;
+        }
+        
         if (isBoss && bossHp <= 0)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
             Debug.Log("Enemy Boss Died");
         }
         
@@ -83,7 +107,10 @@ public class EnemyController : MonoBehaviour
         {
             if (!isBoss)
             {
-                Destroy(gameObject);
+                gameObject.transform.GetChild(0).GetComponent<BulletLauncher>().activated = false;
+                _agent.stoppingDistance = _stopDistance;
+                gameObject.SetActive(false);
+                //Destroy(gameObject);
                 Debug.Log("Enemy Died");
             }
             else if (isBoss)
@@ -99,5 +126,29 @@ public class EnemyController : MonoBehaviour
         {
             enteredShootingArea = true;
         }
+    }
+
+    public void Respawn()
+    {
+        /*int temp = 0;*/
+        destination[0] = _tempDestination;
+        /*foreach (var VARIABLE in _tempDestination)
+        {
+        }*/
+        
+        if (isBoss)
+        {
+            transform.GetChild(0).GetComponent<BulletLauncher>().activated = false;
+            transform.GetChild(1).GetComponent<BulletLauncher>().activated = false;
+            bossHp = 5;
+        }
+        else if (!isBoss)
+        {
+            transform.GetChild(0).GetComponent<BulletLauncher>().activated = false;
+        }
+        
+        enteredShootingArea = false;
+        transform.position = startPosition;
+        gameObject.SetActive(true);
     }
 }

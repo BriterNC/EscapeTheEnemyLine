@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 using Random = UnityEngine.Random;
@@ -28,6 +29,9 @@ public class GameController : MonoBehaviour
     public TextMeshProUGUI currentWaveTextMesh;
     public bool waveStarted;
     public GameObject startButton, alertSound;
+    public GameObject restartButton, resetButton;
+
+    public GameObject bossHpPanel;
 
     public GameObject[] door;
     public GameObject[] bossDoor;
@@ -71,6 +75,26 @@ public class GameController : MonoBehaviour
         //StartWave();
     }
 
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void ResetWave()
+    {
+        if (currentWave == 1)
+        {
+            foreach (GameObject enemy in tempEnemySet)
+            {
+                enemy.GetComponent<EnemyController>().Respawn();
+            }
+        }
+        else if (currentWave == 2)
+        {
+            enemyBoss.GetComponent<EnemyController>().Respawn();
+        }
+    }
+
     public void StartWave()
     {
         foreach (GameObject entryDoor in door)
@@ -97,15 +121,18 @@ public class GameController : MonoBehaviour
         waveStarted = true;
         startButton.SetActive(false);
         alertSound.SetActive(true);
+        
+        restartButton.SetActive(true);
+        resetButton.SetActive(true);
     }
 
-    public void FindEnemyLimit()
+    /*public void FindEnemyLimit()
     {
         if (currentWave == assignedEnemyInWave[currentWave - 1])
         {
             remainEnemy = assignedEnemyInWave[currentWave];
         }
-    }
+    }*/
     
     /*
     1   =   1
@@ -134,6 +161,8 @@ public class GameController : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
             gameOverText.SetActive(true);
+            resetButton.SetActive(false);
+            
             gameOver = true;
             
             // Continue
@@ -194,42 +223,89 @@ public class GameController : MonoBehaviour
         }
         
         //currentWaveTextMesh.text = $"Wave: {currentWave} / {totalWave}";
-
-        if (enemyBoss == null)
-        {
-            foreach (GameObject ledTemp in led)
-            {
-                ledTemp.GetComponent<MeshRenderer>().material = ledGreen;
-            }
-            foreach (GameObject ledTemp in ledShipEntrance)
-            {
-                ledTemp.GetComponent<MeshRenderer>().material = ledGreenShipEntrance;
-            }
-            monitorPanel.GetComponent<Image>().color = Color.green;
-            alertSound.SetActive(false);
-            missionCompleteSound.SetActive(true);
-        }
         
         if (isBossPhrase)
         {
+            switch (enemyBoss.GetComponent<EnemyController>().bossHp)
+            {
+                case (5):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(true);
+                    break;
+                case (4):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(false);
+                    break;
+                case (3):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(false);
+                    break;
+                case (2):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(false);
+                    break;
+                case (1):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(true);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(false);
+                    break;
+                case (0):
+                    bossHpPanel.transform.GetChild(0).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(1).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(2).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(3).gameObject.SetActive(false);
+                    bossHpPanel.transform.GetChild(4).gameObject.SetActive(false);
+                    break;
+            }
+            
+            if (!enemyBoss.activeSelf)
+            {
+                foreach (GameObject ledTemp in led)
+                {
+                    ledTemp.GetComponent<MeshRenderer>().material = ledGreen;
+                }
+                foreach (GameObject ledTemp in ledShipEntrance)
+                {
+                    ledTemp.GetComponent<MeshRenderer>().material = ledGreenShipEntrance;
+                }
+                monitorPanel.GetComponent<Image>().color = Color.green;
+                alertSound.SetActive(false);
+                missionCompleteSound.SetActive(true);
+                resetButton.SetActive(false);
+            }
             return;
         }
         
-        if (!isBossPhrase && tempEnemySet[0] == null && tempEnemySet[1] == null/* && tempEnemySet[2] == null && tempEnemySet[3] == null*/)
+        if (!isBossPhrase && tempEnemySet[0].activeSelf == false && tempEnemySet[1].activeSelf == false/* && tempEnemySet[2] == null && tempEnemySet[3] == null*/)
         {
             Debug.Log("All enemy died!");
+            bossHpPanel.SetActive(true);
             isBossPhrase = true;
             BossPhrase();
         }
         
-        if (spawnedEnemyFloor1 < enemyFloor1Limit)
+        /*if (spawnedEnemyFloor1 < enemyFloor1Limit)
         {
             SpawnEnemy(enemyGameObject, 1);
         }
         if (spawnedEnemyFloor2 < enemyFloor2Limit)
         {
             SpawnEnemy(enemyGameObject, 2);
-        }
+        }*/
     }
 
     private void SpawnEnemy(GameObject enemy, int floor)
@@ -253,6 +329,7 @@ public class GameController : MonoBehaviour
     private void BossPhrase()
     {
         currentWaveTextMesh.text = "Wave: 2 / 2";
+        currentWave = 2;
         enemyBoss.SetActive(true);
         foreach (GameObject door in bossDoor)
         {
